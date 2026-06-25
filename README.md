@@ -19,7 +19,7 @@ Install the required build tools:
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential cmake ninja-build git
+sudo apt install -y build-essential cmake ninja-build git libfuse2
 ```
 
 Download the Linux x86_64 AppImage from the [official FlightGear download page](https://www.flightgear.org/download/).
