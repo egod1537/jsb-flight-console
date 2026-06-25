@@ -18,6 +18,8 @@ FetchContent_MakeAvailable(jsbsim)
 add_executable(
   jsb-flight-console
   src/main.cpp
+  src/flightgear/FlightGearSender.cpp
+  src/simulation/Simulation.cpp
 )
 
 target_compile_features(
@@ -30,4 +32,10 @@ target_link_libraries(
   jsb-flight-console
   PRIVATE
   libJSBSim
+)
+
+target_include_directories(
+  jsb-flight-console
+  PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
