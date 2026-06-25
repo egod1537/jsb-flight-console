@@ -3,6 +3,7 @@
 #include <chrono>
 #include <csignal>
 #include <initialization/FGInitialCondition.h>
+#include <iostream>
 #include <simgear/misc/sg_path.hxx>
 #include <thread>
 
@@ -83,6 +84,11 @@ bool Simulation::Initialize() {
     return false;
   }
 
+  if (!keyboardInput_.Initialize()) {
+    std::cerr << "Failed to initialize keyboard input\n";
+    return false;
+  }
+
   return true;
 }
 
@@ -97,6 +103,13 @@ void Simulation::PrintState() const {
             << " rad\n";
 }
 
+void Simulation::ApplyControlInput() {
+  fdm_->SetPropertyValue("fcs/elevator-cmd-norm", controlInput_.elevator);
+  fdm_->SetPropertyValue("fcs/aileron-cmd-norm", controlInput_.aileron);
+  fdm_->SetPropertyValue("fcs/rudder-cmd-norm", controlInput_.rudder);
+  fdm_->SetPropertyValue("fcs/throttle-cmd-norm", controlInput_.throttle);
+}
+
 void Simulation::Run(const volatile std::sig_atomic_t &running) {
   auto nextFrame = Clock::now();
   double nextLogTime = 0.0;
@@ -104,6 +117,14 @@ void Simulation::Run(const volatile std::sig_atomic_t &running) {
   while (running) {
     nextFrame += std::chrono::duration_cast<Clock::duration>(
         std::chrono::duration<double>(DT));
+
+    if (keyboardInput_.Update(controlInput_)) {
+      std::cout << "control" << " elevator=" << controlInput_.elevator
+                << " aileron=" << controlInput_.aileron
+                << " rudder=" << controlInput_.rudder
+                << " throttle=" << controlInput_.throttle << '\n';
+    }
+    ApplyControlInput();
 
     if (!fdm_->Run()) {
       std::cerr << "JSBSim simulation stopeed\n";

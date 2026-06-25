@@ -1,5 +1,7 @@
 #pragma once
 
+#include "control/ControlInput.hpp"
+#include "control/KeyboardInput.hpp"
 #include "flightgear/FlightGearSender.hpp"
 #include <csignal>
 #include <memory>
@@ -28,7 +30,12 @@ private:
   bool InitializeState();
   void PrintState() const;
 
+  void ApplyControlInput();
+
   std::unique_ptr<JSBSim::FGFDMExec> fdm_;
   flightgear::FlightGearSender flightGearSender_;
+
+  control::ControlInput controlInput_;
+  control::KeyboardInput keyboardInput_;
 };
 } // namespace simulation

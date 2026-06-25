@@ -20,6 +20,7 @@ add_executable(
   src/main.cpp
   src/flightgear/FlightGearSender.cpp
   src/simulation/Simulation.cpp
+  src/control/KeyboardInput.cpp
 )
 
 target_compile_features(
