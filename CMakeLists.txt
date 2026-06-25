@@ -20,6 +20,12 @@ add_executable(
   src/main.cpp
 )
 
+target_compile_features(
+  jsb-flight-console
+  PRIVATE
+  cxx_std_20
+)
+
 target_link_libraries(
   jsb-flight-console
   PRIVATE

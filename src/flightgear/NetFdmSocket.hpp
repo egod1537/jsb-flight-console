@@ -1,0 +1,144 @@
+#pragma once
+
+#include <array>
+#include <bit>
+#include <cstddef>
+#include <cstdint>
+#include <netinet/in.h>
+
+namespace flightgear {
+constexpr std::uint32_t NET_FDM_VERSION = 24;
+
+constexpr std::size_t MAX_ENGINES = 4;
+constexpr std::size_t MAX_TANKS = 4;
+constexpr std::size_t MAX_WHEELS = 3;
+
+struct NetFdmPacket {
+  std::uint32_t version = NET_FDM_VERSION;
+  std::uint32_t padding = 0;
+
+  double longitude = 0.0;
+  double latitude = 0.0;
+  double altitude = 0.0;
+
+  float agl = 0.0f;
+  float phi = 0.0f;
+  float theta = 0.0f;
+  float psi = 0.0f;
+  float alpha = 0.0f;
+  float beta = 0.0f;
+
+  float phidot = 0.0f;
+  float thetadot = 0.0f;
+  float psidot = 0.0f;
+
+  float vcas = 0.0f;
+  float climbRate = 0.0f;
+
+  float vN = 0.0f;
+  float vE = 0.0f;
+  float vD = 0.0f;
+
+  float vBodyU = 0.0f;
+  float vBodyV = 0.0f;
+  float vBodyW = 0.0f;
+
+  float aXPilot = 0.0f;
+  float aYPilot = 0.0f;
+  float aZPilot = 0.0f;
+
+  float stallWarning = 0.0f;
+  float slipDeg = 0.0f;
+
+  std::uint32_t numEngines = 0;
+
+  std::array<std::uint32_t, MAX_ENGINES> engineState{};
+  std::array<float, MAX_ENGINES> rpm{};
+  std::array<float, MAX_ENGINES> fuelFlow{};
+  std::array<float, MAX_ENGINES> fuelPressure{};
+  std::array<float, MAX_ENGINES> egt{};
+  std::array<float, MAX_ENGINES> cht{};
+  std::array<float, MAX_ENGINES> manifoldPressure{};
+  std::array<float, MAX_ENGINES> tit{};
+  std::array<float, MAX_ENGINES> oilTemperature{};
+  std::array<float, MAX_ENGINES> oilPressure{};
+
+  std::uint32_t numTanks = 0;
+  std::array<float, MAX_TANKS> fuelQuantity{};
+
+  std::uint32_t numWheels = 0;
+  std::array<std::uint32_t, MAX_WHEELS> weightOnWheels{};
+  std::array<float, MAX_WHEELS> gearPosition{};
+  std::array<float, MAX_WHEELS> gearSteer{};
+  std::array<float, MAX_WHEELS> gearCompression{};
+
+  std::uint32_t currentTime = 0;
+  std::int32_t warp = 0;
+  float visibility = 0.0f;
+
+  float elevator = 0.0f;
+  float elevatorTrimTab = 0.0f;
+  float leftFlap = 0.0f;
+  float rightFlap = 0.0f;
+  float leftAileron = 0.0f;
+  float rightAileron = 0.0f;
+  float rudder = 0.0f;
+  float noseWheel = 0.0f;
+  float speedbrake = 0.0f;
+  float spoilers = 0.0f;
+};
+
+static_assert(sizeof(float) == 4);
+static_assert(sizeof(double) == 8);
+static_assert(sizeof(std::uint32_t) == 4);
+static_assert(sizeof(NetFdmPacket) == 408);
+
+inline std::uint32_t ToNetwork32(std::uint32_t value) { return htonl(value); }
+inline float ToNetworkFloat(float value) {
+  const auto bits = std::bit_cast<std::uint32_t>(value);
+  const auto networkBits = htonl(bits);
+  return std::bit_cast<float>(networkBits);
+}
+inline double ToNetworkDouble(double value) {
+  if constexpr (std::endian::native == std::endian::big) {
+    return value;
+  }
+
+  auto bits = std::bit_cast<std::uint64_t>(value);
+
+  bits = ((bits & 0x00000000000000FFULL) << 56) |
+         ((bits & 0x000000000000FF00ULL) << 40) |
+         ((bits & 0x0000000000FF0000ULL) << 24) |
+         ((bits & 0x00000000FF000000ULL) << 8) |
+         ((bits & 0x000000FF00000000ULL) >> 8) |
+         ((bits & 0x0000FF0000000000ULL) >> 24) |
+         ((bits & 0x00FF000000000000ULL) >> 40) |
+         ((bits & 0xFF00000000000000ULL) >> 56);
+
+  return std::bit_cast<double>(bits);
+}
+inline std::int32_t ToNetworkInt32(std::int32_t value) {
+  const auto bits = std::bit_cast<std::uint32_t>(value);
+  const auto networkBits = htonl(bits);
+  return std::bit_cast<std::int32_t>(networkBits);
+}
+
+inline NetFdmPacket ToNetworkOrder(NetFdmPacket packet) {
+  packet.version = ToNetwork32(packet.version);
+  packet.padding = ToNetwork32(packet.padding);
+
+  packet.longitude = ToNetworkDouble(packet.longitude);
+  packet.latitude = ToNetworkDouble(packet.latitude);
+  packet.altitude = ToNetworkDouble(packet.altitude);
+
+  packet.agl = ToNetworkFloat(packet.agl);
+  packet.phi = ToNetworkFloat(packet.phi);
+  packet.theta = ToNetworkFloat(packet.theta);
+  packet.psi = ToNetworkFloat(packet.psi);
+  packet.alpha = ToNetworkFloat(packet.alpha);
+  packet.beta = ToNetworkFloat(packet.beta);
+
+  return packet;
+}
+
+} // namespace flightgear
