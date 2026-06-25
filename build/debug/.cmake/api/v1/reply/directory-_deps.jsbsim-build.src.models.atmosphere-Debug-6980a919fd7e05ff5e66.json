@@ -1,0 +1,46 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build/debug/_deps/jsbsim-src/src/models/atmosphere/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "devel",
+			"destination" : "include/JSBSim/models/atmosphere",
+			"paths" : 
+			[
+				"build/debug/_deps/jsbsim-src/src/models/atmosphere/FGMSIS.h",
+				"build/debug/_deps/jsbsim-src/src/models/atmosphere/FGStandardAtmosphere.h",
+				"build/debug/_deps/jsbsim-src/src/models/atmosphere/FGWinds.h",
+				"build/debug/_deps/jsbsim-src/src/models/atmosphere/MSIS/nrlmsise-00.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/jsbsim-build/src/models/atmosphere",
+		"source" : "build/debug/_deps/jsbsim-src/src/models/atmosphere"
+	}
+}

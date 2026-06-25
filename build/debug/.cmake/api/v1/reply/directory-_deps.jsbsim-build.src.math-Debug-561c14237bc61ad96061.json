@@ -1,0 +1,59 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build/debug/_deps/jsbsim-src/src/math/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "devel",
+			"destination" : "include/JSBSim/math",
+			"paths" : 
+			[
+				"build/debug/_deps/jsbsim-src/src/math/FGColumnVector3.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGFunction.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGLocation.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGMatrix33.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGParameter.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGPropertyValue.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGQuaternion.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGRealValue.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGTable.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGCondition.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGRungeKutta.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGModelFunctions.h",
+				"build/debug/_deps/jsbsim-src/src/math/LagrangeMultiplier.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGTemplateFunc.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGFunctionValue.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGParameterValue.h",
+				"build/debug/_deps/jsbsim-src/src/math/FGStateSpace.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/jsbsim-build/src/math",
+		"source" : "build/debug/_deps/jsbsim-src/src/math"
+	}
+}

@@ -1,0 +1,569 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build",
+					"childIndexes" : 
+					[
+						2,
+						18
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build-Debug-c6a6d4234e64047bcf86.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src",
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						10,
+						17
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src-Debug-e3f50b96c3493dfed241.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src",
+					"targetIndexes" : 
+					[
+						7,
+						18
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/initialization",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.initialization-Debug-d74e5df1c834223c4f25.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/initialization",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/input_output",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.input_output-Debug-0a42b5bfa8c4cbd62d4b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/input_output",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/math",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.math-Debug-561c14237bc61ad96061.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/math",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/models",
+					"childIndexes" : 
+					[
+						7,
+						8,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.models-Debug-42e5ad916f8e69d300d3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/models",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/models/atmosphere",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.models.atmosphere-Debug-6980a919fd7e05ff5e66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/models/atmosphere",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/models/propulsion",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.models.propulsion-Debug-4745b755c2725e394509.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/models/propulsion",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/models/flight_control",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.models.flight_control-Debug-a9b799a270a72348e26f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/models/flight_control",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/simgear",
+					"childIndexes" : 
+					[
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.simgear-Debug-221707a12ff7f5f15e8b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/simgear"
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/simgear/structure",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.simgear.structure-Debug-0a74ce4f7a23fd6f5260.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/simgear/structure"
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/simgear/props",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.simgear.props-Debug-cb72cd195e2d1714e73c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/simgear/props",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/simgear/magvar",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.simgear.magvar-Debug-1ad607e46aaa083a7136.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/simgear/magvar",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/simgear/misc",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.simgear.misc-Debug-28e86c39ad738a18395f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/simgear/misc",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/simgear/xml",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.simgear.xml-Debug-dc8cb809377b675826cb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/simgear/xml",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/simgear/io/iostreams",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.simgear.io.iostreams-Debug-d15ad79de5557099723c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/simgear/io/iostreams",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/src/GeographicLib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.src.GeographicLib-Debug-19f158a2d7d92b067ce0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/src/GeographicLib",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "_deps/jsbsim-build/utils",
+					"childIndexes" : 
+					[
+						19
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.utils-Debug-f16e14ee8dffc896d90a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/utils"
+				},
+				{
+					"build" : "_deps/jsbsim-build/utils/aeromatic++",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.jsbsim-build.utils.aeromatic++-Debug-69af353157f544d48a61.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 18,
+					"projectIndex" : 1,
+					"source" : "build/debug/_deps/jsbsim-src/utils/aeromatic++",
+					"targetIndexes" : 
+					[
+						0,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "jsb-flight-console",
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					],
+					"name" : "JSBSim",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 19,
+					"id" : "Aeromatic++::@d0f5a4e994ee50bcfc10",
+					"jsonFile" : "target-Aeromatic++-Debug-fd8de8daf72652ac9021.json",
+					"name" : "Aeromatic++",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "Atmosphere::@8257534b0aef0c24be2f",
+					"jsonFile" : "target-Atmosphere-Debug-8bd385cf271fccf316f4.json",
+					"name" : "Atmosphere",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "FlightControl::@e7120b0cb3004672eed3",
+					"jsonFile" : "target-FlightControl-Debug-971313dcfdd1595b6438.json",
+					"name" : "FlightControl",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "GeographicLib::@9508bdf41820f64a9958",
+					"jsonFile" : "target-GeographicLib-Debug-770dcbb76758a708b1d7.json",
+					"name" : "GeographicLib",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "IOStreams::@19b61627d4bfc0fc0a92",
+					"jsonFile" : "target-IOStreams-Debug-6b386608d10bf0744396.json",
+					"name" : "IOStreams",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Init::@a717c7d6889f982a389e",
+					"jsonFile" : "target-Init-Debug-ecbdc530f3f9eddd1e6f.json",
+					"name" : "Init",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "InputOutput::@82dc60a6767e011ab037",
+					"jsonFile" : "target-InputOutput-Debug-64d6efc205e2a03392e5.json",
+					"name" : "InputOutput",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "JSBSim::@c784da536e9a96439fea",
+					"jsonFile" : "target-JSBSim-Debug-c7008a79d088b826017a.json",
+					"name" : "JSBSim",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "Magvar::@1de23d1f971a83b2cf7c",
+					"jsonFile" : "target-Magvar-Debug-1ca2d57c61c395dd7365.json",
+					"name" : "Magvar",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "Math::@f759674af338b370604a",
+					"jsonFile" : "target-Math-Debug-b540033744d43ce69dff.json",
+					"name" : "Math",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "Misc::@fcab2d7ac3c87d410a8f",
+					"jsonFile" : "target-Misc-Debug-9ed606460af9bd7b5294.json",
+					"name" : "Misc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "Models::@dc08a88e42e1e11ef811",
+					"jsonFile" : "target-Models-Debug-11c759add127c0bfcf24.json",
+					"name" : "Models",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "Properties::@d344a12c55b23ff0f789",
+					"jsonFile" : "target-Properties-Debug-85ad273c1063916d51e9.json",
+					"name" : "Properties",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "Propulsion::@1ada363d7be76a0048af",
+					"jsonFile" : "target-Propulsion-Debug-497f830912bbc61df724.json",
+					"name" : "Propulsion",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "Xml::@ced3cdc9d2e46dd05292",
+					"jsonFile" : "target-Xml-Debug-5200a34a586b21832ae8.json",
+					"name" : "Xml",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "aeromatic::@d0f5a4e994ee50bcfc10",
+					"jsonFile" : "target-aeromatic-Debug-516e8a8eab7931403116.json",
+					"name" : "aeromatic",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "dist::@fe9783cb37d2b616d1ae",
+					"jsonFile" : "target-dist-Debug-0fb6513bdd4ff69a42b5.json",
+					"name" : "dist",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "jsb-flight-console::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-jsb-flight-console-Debug-cb2f5f77b74fd9bcef61.json",
+					"name" : "jsb-flight-console",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "libJSBSim::@c784da536e9a96439fea",
+					"jsonFile" : "target-libJSBSim-Debug-b9a18487af3538d3b76b.json",
+					"name" : "libJSBSim",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/yang/proj/jsb-flight-console/build/debug",
+		"source" : "/home/yang/proj/jsb-flight-console"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

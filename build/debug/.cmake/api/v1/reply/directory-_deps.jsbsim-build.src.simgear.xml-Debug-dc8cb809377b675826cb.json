@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build/debug/_deps/jsbsim-src/src/simgear/xml/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "devel",
+			"destination" : "include/JSBSim/simgear/xml",
+			"paths" : 
+			[
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/easyxml.hxx",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/ascii.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/asciitab.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/expat.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/expat_external.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/iasciitab.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/internal.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/latin1tab.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/macconfig.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/nametab.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/utf8tab.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/winconfig.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/xmlrole.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/xmltok.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/xmltok_impl.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/xmltok_impl.c",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/xmltok_ns.c",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/expat_config.h",
+				"build/debug/_deps/jsbsim-src/src/simgear/xml/siphash.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/jsbsim-build/src/simgear/xml",
+		"source" : "build/debug/_deps/jsbsim-src/src/simgear/xml"
+	}
+}

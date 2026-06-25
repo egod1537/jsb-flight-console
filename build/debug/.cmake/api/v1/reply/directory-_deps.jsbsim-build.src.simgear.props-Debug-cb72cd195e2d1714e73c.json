@@ -1,0 +1,43 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build/debug/_deps/jsbsim-src/src/simgear/props/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "devel",
+			"destination" : "include/JSBSim/simgear/props",
+			"paths" : 
+			[
+				"build/debug/_deps/jsbsim-src/src/simgear/props/props.hxx"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/jsbsim-build/src/simgear/props",
+		"source" : "build/debug/_deps/jsbsim-src/src/simgear/props"
+	}
+}

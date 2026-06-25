@@ -1,0 +1,47 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build/debug/_deps/jsbsim-src/src/GeographicLib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "devel",
+			"destination" : "include/GeographicLib",
+			"paths" : 
+			[
+				"build/debug/_deps/jsbsim-src/src/GeographicLib/Config.h",
+				"build/debug/_deps/jsbsim-src/src/GeographicLib/Constants.hpp",
+				"build/debug/_deps/jsbsim-src/src/GeographicLib/Geodesic.hpp",
+				"build/debug/_deps/jsbsim-src/src/GeographicLib/GeodesicLine.hpp",
+				"build/debug/_deps/jsbsim-src/src/GeographicLib/Math.hpp"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/jsbsim-build/src/GeographicLib",
+		"source" : "build/debug/_deps/jsbsim-src/src/GeographicLib"
+	}
+}

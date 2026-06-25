@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build/debug/_deps/jsbsim-src/src/simgear/misc/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "devel",
+			"destination" : "include/JSBSim/simgear/misc",
+			"paths" : 
+			[
+				"build/debug/_deps/jsbsim-src/src/simgear/misc/stdint.hxx",
+				"build/debug/_deps/jsbsim-src/src/simgear/misc/sg_path.hxx",
+				"build/debug/_deps/jsbsim-src/src/simgear/misc/strutils.hxx"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/jsbsim-build/src/simgear/misc",
+		"source" : "build/debug/_deps/jsbsim-src/src/simgear/misc"
+	}
+}
