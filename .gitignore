@@ -1,0 +1,18 @@
+# CMake build outputs
+/build/
+
+# Downloaded/runtime dependencies
+/.deps/
+
+# Runtime-generated files
+/runtime/
+
+# clangd symlink
+/compile_commands.json
+
+# Editors
+/.idea/
+/.vscode/
+
+# OS files
+.DS_Store
